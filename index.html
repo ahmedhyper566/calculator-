@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="title-bar">
+            <div class="title-left">
+                <div class="calculator-icon"></div>
+                <span class="title-text">Calculator</span>
+            </div>
+            <div class="title-controls">
+                <button class="control-btn">—</button>
+                <button class="control-btn">⬜</button>
+                <button class="control-btn close-btn">✕</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="mode-controls">
+                <button class="hamburger">☰</button>
+                <span class="mode-text">Standard</span>
+            </div>
+            <button class="history-btn">🕐</button>
+        </div>
+
+        <div class="display">
+            <div class="display-main" id="display">0</div>
+        </div>
+
+        <div class="memory-bar">
+            <button class="memory-btn" id="mc" disabled>MC</button>
+            <button class="memory-btn" id="mr" disabled>MR</button>
+            <button class="memory-btn" id="mplus">M+</button>
+            <button class="memory-btn" id="mminus">M-</button>
+            <button class="memory-btn" id="ms">MS</button>
+            <button class="memory-btn" id="mv">Mv</button>
+        </div>
+
+        <div class="keypad">
+            <button class="btn operation" onclick="percentage()">%</button>
+            <button class="btn clear" onclick="clearEntry()">CE</button>
+            <button class="btn clear" onclick="clearAll()">C</button>
+            <button class="btn operation" onclick="backspace()">⌫</button>
+            
+            <button class="btn operation" onclick="fraction()"><span class="btn-fraction">¹⁄ₓ</span></button>
+            <button class="btn operation" onclick="square()">x²</button>
+            <button class="btn operation btn-sqrt" onclick="squareRoot()">²√x</button>
+            <button class="btn operation" onclick="divide()">÷</button>
+            
+            <button class="btn number" onclick="inputNumber('7')">7</button>
+            <button class="btn number" onclick="inputNumber('8')">8</button>
+            <button class="btn number" onclick="inputNumber('9')">9</button>
+            <button class="btn operation" onclick="multiply()">×</button>
+            
+            <button class="btn number" onclick="inputNumber('4')">4</button>
+            <button class="btn number" onclick="inputNumber('5')">5</button>
+            <button class="btn number" onclick="inputNumber('6')">6</button>
+            <button class="btn operation" onclick="subtract()">−</button>
+            
+            <button class="btn number" onclick="inputNumber('1')">1</button>
+            <button class="btn number" onclick="inputNumber('2')">2</button>
+            <button class="btn number" onclick="inputNumber('3')">3</button>
+            <button class="btn operation" onclick="add()">+</button>
+            
+            <button class="btn operation" onclick="toggleSign()">+/−</button>
+            <button class="btn number" onclick="inputNumber('0')">0</button>
+            <button class="btn number" onclick="inputDecimal()">.</button>
+            <button class="btn equals" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

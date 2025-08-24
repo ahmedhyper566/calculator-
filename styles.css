@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    width: 320px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.title-bar {
+    background: #f3f3f3;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.calculator-icon {
+    width: 16px;
+    height: 16px;
+    background: #0078d4;
+    border-radius: 2px;
+}
+
+.title-text {
+    font-size: 12px;
+    color: #333;
+}
+
+.title-controls {
+    display: flex;
+    gap: 2px;
+}
+
+.control-btn {
+    width: 46px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    font-size: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+.close-btn:hover {
+    background: #e81123;
+    color: white;
+}
+
+.header {
+    background: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.mode-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mode-text {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.history-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.display {
+    background: white;
+    padding: 20px;
+    text-align: right;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.display-main {
+    font-size: 48px;
+    font-weight: 300;
+    color: #333;
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.memory-bar {
+    background: #f8f8f8;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.memory-btn {
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.memory-btn:hover {
+    background: rgba(0,0,0,0.1);
+}
+
+.memory-btn:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #e0e0e0;
+    padding: 1px;
+}
+
+.btn {
+    background: #fafafa;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+}
+
+.btn:hover {
+    background: #f0f0f0;
+}
+
+.btn:active {
+    background: #e0e0e0;
+}
+
+.btn.operation {
+    background: #f8f8f8;
+}
+
+.btn.operation:hover {
+    background: #f0f0f0;
+}
+
+.btn.equals {
+    background: #0078d4;
+    color: white;
+}
+
+.btn.equals:hover {
+    background: #106ebe;
+}
+
+.btn.clear {
+    background: #f8f8f8;
+}
+
+.btn.number {
+    background: white;
+}
+
+.btn.number:hover {
+    background: #f8f8f8;
+}
+
+.btn sup {
+    font-size: 12px;
+    vertical-align: super;
+}
+
+.btn-fraction {
+    font-size: 14px;
+}
+
+.btn-sqrt {
+    position: relative;
+}
+
+.btn-sqrt::before {
+    content: '√';
+    position: absolute;
+    font-size: 20px;
+}
